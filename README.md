@@ -1,4 +1,8 @@
-# BMW Client
+<div align="center">
+<img width="100" height="100" alt="icon" src="https://github.com/user-attachments/assets/4c050a85-67ca-4d2a-8332-a3aae52939d0" />
+  
+**BMWClient** is a free & open-source hacked client for Heypixel. Based [Liquidbounce](https://github.com/CCBlueX/LiquidBounce)
 
-一个免费、开源的Minecraft Fabric客户端，基于[LiquidBounce Nextgen](https://github.com/CCBlueX/LiquidBounce)编写<br>
-获取使用文档和参数请在B站搜索ShootForever<br>
+</div>
+
+
