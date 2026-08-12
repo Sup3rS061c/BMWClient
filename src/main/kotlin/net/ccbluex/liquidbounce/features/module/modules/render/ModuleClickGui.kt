@@ -31,6 +31,7 @@ import net.ccbluex.liquidbounce.integration.VirtualDisplayScreen
 import net.ccbluex.liquidbounce.integration.VirtualScreenType
 import net.ccbluex.liquidbounce.integration.backend.browser.Browser
 import net.ccbluex.liquidbounce.integration.interop.protocol.rest.v1.game.isTyping
+import net.ccbluex.liquidbounce.integration.oneconfig.OneConfigMenu
 import net.ccbluex.liquidbounce.integration.theme.ThemeManager
 import net.ccbluex.liquidbounce.additions.setPosition
 import net.ccbluex.liquidbounce.event.waitSeconds
@@ -112,13 +113,8 @@ object ModuleClickGui :
             return
         }
 
-        mc.setScreen(
-            if (clickGuiBrowser == null) {
-                VirtualDisplayScreen(VirtualScreenType.CLICK_GUI)
-            } else {
-                ClickScreen()
-            }
-        )
+        // Open the OneConfig menu GUI instead of the web based clickgui
+        OneConfigMenu.open()
         super.onEnabled()
     }
 

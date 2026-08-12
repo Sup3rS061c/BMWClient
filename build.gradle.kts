@@ -102,6 +102,18 @@ repositories {
         name = "ViaVersion Libraries"
         url = uri("https://maven.florianreuth.de/snapshots/")
     }
+    maven {
+        name = "Polyfrost"
+        url = uri("https://repo.polyfrost.org/releases")
+    }
+    maven {
+        name = "Polyfrost Snapshots"
+        url = uri("https://repo.polyfrost.org/snapshots")
+    }
+    maven {
+        name = "Google"
+        url = uri("https://dl.google.com/dl/android/maven2")
+    }
 }
 
 loom {
@@ -135,6 +147,9 @@ dependencies {
     // JCEF Support
     includeModDependency("com.github.CCBlueX:mcef:${project.property("mcef_version")}")
     includeDependency("net.ccbluex:netty-httpserver:2.4.2")
+
+    // OneConfig (ClickGUI menu) - https://github.com/Polyfrost/OneConfig
+    includeModDependency("org.polyfrost.oneconfig:1.21.4-fabric:1.1.4")
     // MacOS native (Linux native is included in game)
     includeDependency("io.netty:netty-transport-classes-kqueue:${project.property("netty_version")}")
     includeNative("io.netty:netty-transport-native-kqueue:${project.property("netty_version")}:osx-aarch_64")

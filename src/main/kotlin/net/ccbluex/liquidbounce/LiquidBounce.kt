@@ -49,6 +49,7 @@ import net.ccbluex.liquidbounce.features.misc.AccountManager
 import net.ccbluex.liquidbounce.features.misc.FriendManager
 import net.ccbluex.liquidbounce.features.misc.proxy.ProxyManager
 import net.ccbluex.liquidbounce.features.module.ModuleManager
+import net.ccbluex.liquidbounce.integration.oneconfig.OneConfigMenu
 import net.ccbluex.liquidbounce.bmw.PlacementManager
 import net.ccbluex.liquidbounce.features.module.modules.bmw.delayblink.DelayBlinkPacketManager
 import net.ccbluex.liquidbounce.features.module.modules.bmw.fireballfly.FireballFlyPacketManager
@@ -250,6 +251,9 @@ object LiquidBounce : EventListener {
         // Register commands and modules
         CommandManager.registerInbuilt()
         ModuleManager.registerInbuilt()
+
+        // Register the OneConfig based menu GUI
+        OneConfigMenu.register()
 
         // Load user scripts
         runCatching(ScriptManager::loadAll).onFailure { error ->
